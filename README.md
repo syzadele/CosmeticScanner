@@ -1,0 +1,2 @@
+# CosmeticScanner
+Cosmetic price comparator
