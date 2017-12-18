@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>resultPage</title>
+</head>
+
+<body>
+  <h1 align="center">{{i}} result(s) for product '{{THISproductN}} in SEPHORA'</h1>
+  <style>
+        .result{
+            display: inline-block;
+        }
+        .shopBrand{
+            text-align: center;
+        }
+        .resultDiv{
+            text-align: center;
+            background-color: lightgray;
+        }
+    </style>
+  <div class="resultDiv">
+    <h2 class="shopBrand">SEPHORA<h2>
+    {% for s in range(i) %}
+    <div class="result" style="height: 350px; width: 400px;">
+    <h4>result {{listR[s][0]}}</h4>
+    <img src="https://www.sephora.fr{{listR[s][1]}}", alt="product picture", width=135, height=135>
+    <p>{{listR[s][2]}}</p>
+    <p>{{listR[s][3]}}</p> 
+    </div>
+	{% endfor %}
+  </div>
+  
+  <h1 align="center">{{j}} result(s) for product '{{THISproductN}}' in MARIONNAUD</h1>
+  <div class="resultDiv">
+    <h2 class="shopBrand">MARIONNAUD</h2>
+      {% for m in range(j) %}
+    <div class="result" style="height: 350px; width: 400px;">
+    <h4>result {{listRM[m][0]}}</h4>
+    <img src="https://www.marionnaud.fr{{listRM[m][1]}}", alt="product picture", width=135, height=135>
+    <p>{{listRM[m][2]}}</p>
+    <p>{{listRM[m][3]}}</p> 
+    </div>
+	{% endfor %}  
+  </div>
+  
+  <h1 align="center">{{k}} result(s) for product '{{THISproductN}}' in NOCIBE</h1>
+  <div class="resultDiv">
+    <h2 class="shopBrand">NOCIBE<h2>
+      {% for n in range(k) %}
+    <div class="result" style="height: 350px; width: 400px;">
+    <h4>result {{listRN[n][0]}}</h4>
+    <img src="{{listRN[n][1]}}", alt="product picture", width=135, height=135>
+    <p>{{listRN[n][2]}}</p>
+    <p>{{listRN[n][3]}}</p> 
+    </div>
+	{% endfor %}  
+  </div>
+</body>
+</html>
